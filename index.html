@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAHP | ASU – Bewerbung als Abteilungsleiter</title>
+<meta name="description" content="Bewerbung von Isaiah Novack als Abteilungsleiter der Air Support Unit des SAHP.">
+
+<style>
+:root{
+  --bg:#03070d;
+  --panel:rgba(8,16,27,.78);
+  --panel2:rgba(13,25,40,.66);
+  --line:rgba(56,156,255,.25);
+  --blue:#1597ff;
+  --blue2:#6bc4ff;
+  --white:#f4f8ff;
+  --muted:#9aabba;
+  --gold:#e6b85c;
+  --max:1180px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+
+html{
+  scroll-behavior:smooth
+}
+
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  overflow-x:hidden;
+  line-height:1.65;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:100;
+  background:radial-gradient(
+    circle at var(--mx,50%) var(--my,20%),
+    rgba(21,151,255,.09),
+    transparent 25%
+  );
+}
+
+a{
+  color:inherit;
+  text-decoration:none
+}
+
+::selection{
+  background:var(--blue);
+  color:#fff
+}
+
+
+/* =========================
+   LOADER
+========================= */
+
+#loader{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:#02060b;
+  display:grid;
+  place-items:center;
+  transition:opacity .8s,visibility .8s;
+}
+
+#loader.hide{
+  opacity:0;
+  visibility:hidden
+}
+
+.loader-bg{
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(1,5,10,.48),
+      #02060b 88%
+    ),
+    url("https://preview.redd.it/the-sahp-have-added-a-new-helicopter-to-their-fleet-v0-x13g7ufgm47h1.jpeg?width=1080&crop=smart&auto=webp&s=1884f29bbcd4223544c62e6dd0ca5c4bce306cde")
+    center/cover no-repeat;
+
+  filter:saturate(.9) contrast(1.1);
+  transform:scale(1.04);
+}
+
+.loader-content{
+  position:relative;
+  text-align:center;
+  width:min(560px,90vw)
+}
+
+.loader-kicker{
+  letter-spacing:.38em;
+  text-transform:uppercase;
+  color:var(--blue2);
+  font-size:11px;
+  font-weight:800
+}
+
+.loader-title{
+  font-size:clamp(42px,8vw,86px);
+  font-weight:950;
+  letter-spacing:-.06em;
+  line-height:.9;
+  margin:16px 0
+}
+
+.loader-title span{
+  color:var(--blue)
+}
+
+.loader-sub{
+  color:#aebdcd;
+  text-transform:uppercase;
+  letter-spacing:.28em;
+  font-size:12px
+}
+
+.loader-bar{
+  height:2px;
+  background:#172433;
+  margin:34px auto 12px;
+  max-width:460px;
+  overflow:hidden
+}
+
+.loader-fill{
+  height:100%;
+  width:0;
+  background:linear-gradient(
+    90deg,
+    var(--blue),
+    #b8e3ff
+  );
+  animation:load 2.5s ease forwards
+}
+
+.loader-status{
+  font:700 10px/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;
+  color:#71869b;
+  text-transform:uppercase;
+  letter-spacing:.18em
+}
+
+@keyframes load{
+  to{
+    width:100%
+  }
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:500;
+  height:74px;
+
+  background:rgba(2,7,13,.62);
+  backdrop-filter:blur(16px);
+
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.nav-inner{
+  width:min(var(--max),92vw);
+  height:100%;
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  font-weight:900;
+  letter-spacing:.12em;
+  font-size:13px
+}
+
+.brand-mark{
+  width:36px;
+  height:36px;
+
+  border:1px solid var(--blue);
+
+  display:grid;
+  place-items:center;
+
+  transform:skew(-8deg);
+
+  box-shadow:
+    0 0 24px rgba(21,151,255,.16)
+}
+
+.brand-mark:before{
+  content:"✦";
+  color:var(--blue);
+  font-size:18px;
+  transform:skew(8deg)
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+
+  color:#8ea0b2;
+
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-weight:800
+}
+
+.nav-links a{
+  transition:.25s
+}
+
+.nav-links a:hover{
+  color:#fff
+}
+
+.nav-apply{
+  border:1px solid var(--line);
+  padding:9px 13px;
+  color:#dcecff
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+
+  display:flex;
+  align-items:end;
+
+  overflow:hidden
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+
+  background:
+   linear-gradient(
+     180deg,
+     rgba(2,7,13,.15) 10%,
+     rgba(2,7,13,.18) 35%,
+     #03070d 92%
+   ),
+   linear-gradient(
+     90deg,
+     rgba(3,7,13,.75),
+     transparent 65%
+   ),
+   url("https://preview.redd.it/the-sahp-have-added-a-new-helicopter-to-their-fleet-v0-x13g7ufgm47h1.jpeg?width=1080&crop=smart&auto=webp&s=1884f29bbcd4223544c62e6dd0ca5c4bce306cde")
+   center/cover no-repeat;
+
+  transform:scale(1.05);
+  animation:heroZoom 10s ease-out forwards
+}
+
+.hero-grid{
+  position:absolute;
+  inset:0;
+  opacity:.16;
+
+  background-image:
+    linear-gradient(
+      rgba(82,171,255,.14) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(82,171,255,.14) 1px,
+      transparent 1px
+    );
+
+  background-size:70px 70px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 78%
+    )
+}
+
+@keyframes heroZoom{
+  to{
+    transform:scale(1)
+  }
+}
+
+.hero-inner{
+  position:relative;
+  width:min(var(--max),92vw);
+  margin:0 auto;
+  padding:150px 0 86px
+}
+
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  color:var(--blue2);
+
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.28em;
+  text-transform:uppercase
+}
+
+.eyebrow:before{
+  content:"";
+  width:38px;
+  height:1px;
+  background:var(--blue)
+}
+
+.hero h1{
+  font-size:clamp(48px,8vw,108px);
+  line-height:.87;
+  letter-spacing:-.065em;
+
+  margin:22px 0 20px;
+
+  max-width:950px
+}
+
+.hero h1 .outline{
+  -webkit-text-stroke:1px rgba(255,255,255,.7);
+  color:transparent
+}
+
+.hero-copy{
+  max-width:690px;
+  color:#b8c5d3;
+  font-size:17px
+}
+
+.hero-meta{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:30px
+}
+
+.tag{
+  border:1px solid rgba(91,172,255,.28);
+
+  background:rgba(3,10,18,.55);
+
+  padding:8px 11px;
+
+  color:#c7d8e8;
+
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.13em
+}
+
+.scroll{
+  margin-top:60px;
+
+  color:#74879a;
+
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.25em;
+
+  display:flex;
+  align-items:center;
+  gap:10px
+}
+
+.scroll:after{
+  content:"";
+  width:80px;
+  height:1px;
+  background:#26394c
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+section{
+  position:relative;
+  padding:120px 0
+}
+
+.wrap{
+  width:min(var(--max),92vw);
+  margin:auto
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  align-items:end;
+  margin-bottom:48px
+}
+
+.section-kicker{
+  color:var(--blue);
+
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+
+  margin-bottom:10px
+}
+
+.section-title{
+  font-size:clamp(34px,5vw,64px);
+  line-height:.95;
+  letter-spacing:-.05em
+}
+
+.section-note{
+  max-width:390px;
+  color:var(--muted);
+  font-size:14px
+}
+
+.grid{
+  display:grid;
+  gap:18px
+}
+
+.two{
+  grid-template-columns:1.05fr .95fr
+}
+
+.three{
+  grid-template-columns:repeat(3,1fr)
+}
+
+.card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(14,28,44,.78),
+      rgba(4,11,19,.76)
+    );
+
+  border:1px solid rgba(102,174,235,.13);
+
+  position:relative;
+  overflow:hidden;
+
+  padding:28px;
+  border-radius:2px;
+
+  box-shadow:
+    0 18px 60px rgba(0,0,0,.18)
+}
+
+.card:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(21,151,255,.06),
+      transparent 35%
+    )
+}
+
+.card-number{
+  color:#3d5870;
+
+  font:700 11px ui-monospace,monospace;
+
+  letter-spacing:.12em
+}
+
+.card h3{
+  font-size:21px;
+  margin:14px 0 8px
+}
+
+.card p{
+  color:#9eafc0;
+  font-size:14px
+}
+
+.accent{
+  color:var(--blue2)
+}
+
+
+/* =========================
+   BIOGRAFIE
+========================= */
+
+.bio-photo{
+  min-height:590px;
+  position:relative;
+  overflow:hidden;
+
+  background:
+   linear-gradient(
+     180deg,
+     transparent 48%,
+     rgba(2,7,13,.94) 100%
+   ),
+   linear-gradient(
+     90deg,
+     rgba(2,7,13,.24),
+     transparent 55%
+   ),
+   url("https://cdn.discordapp.com/attachments/1524048220672491741/1556689273875333220/20261005172625_1.jpg?backend=b2&ex=6ac5135c&is=6ac3c1dc&hm=13b7e4ac7f79a5e1bde41781a21d4d07012628e7b7feb4d82c085107535c404f")
+   center 47%/cover no-repeat
+}
+
+.bio-photo:after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  border:1px solid rgba(91,172,255,.18);
+
+  box-shadow:
+    inset 0 0 80px rgba(0,0,0,.45)
+}
+
+.photo-label{
+  position:absolute;
+  z-index:2;
+  left:25px;
+  bottom:24px
+}
+
+.photo-label strong{
+  display:block;
+  font-size:25px;
+  letter-spacing:-.03em
+}
+
+.photo-label span{
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#89a1b8
+}
+
+.data-list{
+  display:grid;
+  gap:1px;
+  margin-top:20px
+}
+
+.data-row{
+  display:grid;
+  grid-template-columns:145px 1fr;
+
+  padding:16px 0;
+
+  border-bottom:1px solid rgba(255,255,255,.07)
+}
+
+.data-row span:first-child{
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  color:#63798e
+}
+
+.data-row span:last-child{
+  font-weight:700;
+  color:#e9f2fb
+}
+
+.bio-text{
+  margin-top:30px;
+  color:#aebdca;
+  font-size:15px
+}
+
+
+/* =========================
+   ERFAHRUNG
+========================= */
+
+.exp{
+  display:flex;
+  gap:18px;
+  align-items:flex-start
+}
+
+.exp-icon{
+  flex:0 0 45px;
+  height:45px;
+
+  border:1px solid rgba(21,151,255,.38);
+
+  display:grid;
+  place-items:center;
+
+  color:var(--blue);
+  font-weight:900
+}
+
+.exp h3{
+  margin:0;
+  font-size:17px
+}
+
+.exp small{
+  color:#657d92;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.12em
+}
+
+.exp p{
+  margin-top:5px
+}
+
+
+/* =========================
+   MOTIVATION
+========================= */
+
+.motive{
+  min-height:250px
+}
+
+.motive .big{
+  font-size:48px;
+  line-height:1;
+  font-weight:950;
+  color:#dcecff
+}
+
+.motive p{
+  margin-top:18px
+}
+
+.checks{
+  display:grid;
+  gap:12px;
+  margin-top:22px
+}
+
+.check{
+  display:flex;
+  gap:11px;
+  color:#b7c7d7;
+  font-size:14px
+}
+
+.check b{
+  color:var(--blue);
+  font-size:17px
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+  position:relative;
+  margin-top:30px
+}
+
+.timeline:before{
+  content:"";
+
+  position:absolute;
+
+  left:14px;
+  top:0;
+  bottom:0;
+
+  width:1px;
+
+  background:
+    linear-gradient(
+      var(--blue),
+      rgba(21,151,255,0)
+    )
+}
+
+.t-item{
+  position:relative;
+  padding-left:55px;
+  padding-bottom:34px
+}
+
+.t-dot{
+  position:absolute;
+
+  left:8px;
+  top:4px;
+
+  width:13px;
+  height:13px;
+
+  border:2px solid var(--blue);
+
+  background:var(--bg);
+
+  box-shadow:
+    0 0 18px rgba(21,151,255,.45)
+}
+
+.t-item h3{
+  font-size:19px
+}
+
+.t-item .role{
+  color:var(--blue2);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.16em
+}
+
+.t-item p{
+  color:#93a7ba;
+  font-size:14px;
+  margin-top:6px
+}
+
+
+/* =========================
+   FLUGERFAHRUNG
+========================= */
+
+.flight-banner{
+  min-height:460px;
+
+  display:flex;
+  align-items:end;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(2,7,13,.05),
+      #03070d 96%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(2,7,13,.82),
+      transparent 72%
+    ),
+    url("https://preview.redd.it/the-sahp-have-added-a-new-helicopter-to-their-fleet-v0-x13g7ufgm47h1.jpeg?width=1080&crop=smart&auto=webp&s=1884f29bbcd4223544c62e6dd0ca5c4bce306cde")
+    center/cover no-repeat;
+
+  border-top:1px solid rgba(84,166,236,.12);
+  border-bottom:1px solid rgba(84,166,236,.12)
+}
+
+.flight-content{
+  padding:55px 0;
+  width:min(var(--max),92vw);
+  margin:auto
+}
+
+.flight-content h2{
+  font-size:clamp(36px,6vw,75px);
+  line-height:.9;
+  max-width:670px;
+  letter-spacing:-.05em
+}
+
+.flight-content p{
+  max-width:610px;
+  color:#b2c0ce;
+  margin-top:18px;
+  font-size:15px
+}
+
+
+/* =========================
+   ABSCHLUSS
+========================= */
+
+.final{
+  text-align:center;
+  padding:150px 0 110px;
+  overflow:hidden
+}
+
+.final:before{
+  content:"ASU";
+
+  position:absolute;
+  inset:auto 0 -40px;
+
+  text-align:center;
+
+  font-size:30vw;
+  font-weight:950;
+
+  color:rgba(21,151,255,.035);
+
+  line-height:.7;
+
+  pointer-events:none
+}
+
+.final .wrap{
+  position:relative
+}
+
+.final h2{
+  font-size:clamp(48px,8vw,105px);
+  letter-spacing:-.07em;
+  line-height:.85
+}
+
+.final h2 span{
+  color:var(--blue)
+}
+
+.final p{
+  max-width:650px;
+  margin:24px auto 0;
+  color:#9eb0c1
+}
+
+.signature{
+  margin:55px auto 0;
+
+  display:inline-flex;
+  flex-direction:column;
+  gap:4px;
+
+  border-top:1px solid var(--line);
+
+  padding-top:15px
+}
+
+.signature strong{
+  font-size:18px
+}
+
+.signature span{
+  font-size:9px;
+  color:#6e8397;
+  text-transform:uppercase;
+  letter-spacing:.2em
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  border-top:1px solid rgba(255,255,255,.06);
+
+  padding:25px 0;
+
+  color:#607488;
+
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.16em
+}
+
+.footer-inner{
+  width:min(var(--max),92vw);
+  margin:auto;
+
+  display:flex;
+  justify-content:space-between;
+  gap:20px
+}
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+
+  transition:
+    opacity .8s ease,
+    transform .8s ease
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none
+}
+
+.delay1{
+  transition-delay:.08s
+}
+
+.delay2{
+  transition-delay:.16s
+}
+
+.delay3{
+  transition-delay:.24s
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px){
+
+  .nav-links{
+    display:none
+  }
+
+  section{
+    padding:85px 0
+  }
+
+  .two,
+  .three{
+    grid-template-columns:1fr
+  }
+
+  .section-head{
+    display:block
+  }
+
+  .section-note{
+    margin-top:15px
+  }
+
+  .bio-photo{
+    min-height:430px
+  }
+
+  .data-row{
+    grid-template-columns:120px 1fr
+  }
+
+  .hero-inner{
+    padding-bottom:65px
+  }
+
+  .hero-copy{
+    font-size:15px
+  }
+
+  .flight-banner{
+    min-height:500px
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     LOADER
+========================= -->
+
+<div id="loader">
+
+  <div class="loader-bg"></div>
+
+  <div class="loader-content">
+
+    <div class="loader-kicker">
+      San Andreas Highway Patrol
+    </div>
+
+    <div class="loader-title">
+      A<span>S</span>U
+    </div>
+
+    <div class="loader-sub">
+      Air Support Unit · Application System
+    </div>
+
+    <div class="loader-bar">
+      <div class="loader-fill"></div>
+    </div>
+
+    <div
+      class="loader-status"
+      id="loaderStatus"
+    >
+      INITIALISIERE BEWERBUNG · 00%
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="nav">
+
+  <div class="nav-inner">
+
+    <a class="brand" href="#top">
+
+      <span class="brand-mark"></span>
+
+      SAHP / ASU
+
+    </a>
+
+
+    <div class="nav-links">
+
+      <a href="#biografie">
+        Biografie
+      </a>
+
+      <a href="#erfahrung">
+        Erfahrung
+      </a>
+
+      <a href="#motivation">
+        Motivation
+      </a>
+
+      <a href="#flug">
+        Flugerfahrung
+      </a>
+
+    </div>
+
+
+    <a
+      class="nav-apply"
+      href="#abschluss"
+    >
+      Bewerbung
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main id="top">
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+  <div class="hero-bg"></div>
+
+  <div class="hero-grid"></div>
+
+
+  <div class="hero-inner">
+
+    <div class="eyebrow reveal">
+      San Andreas Highway Patrol · Air Support Unit
+    </div>
+
+
+    <h1 class="reveal delay1">
+
+      BEWERBUNG<br>
+
+      <span class="outline">
+        ALS ABTEILUNGSLEITER
+      </span><br>
+
+      <span class="accent">
+        DER ASU.
+      </span>
+
+    </h1>
+
+
+    <p class="hero-copy reveal delay2">
+
+      Eine Bewerbung für eine Abteilung, in der Übersicht,
+      Kommunikation und saubere Entscheidungen genauso wichtig
+      sind wie Können am Steuer und im Einsatz.
+
+    </p>
+
+
+    <div class="hero-meta reveal delay3">
+
+      <span class="tag">
+        Isaiah Novack
+      </span>
+
+      <span class="tag">
+        Rang 23 · Sheriff
+      </span>
+
+      <span class="tag">
+        Visumsstufe 22
+      </span>
+
+      <span class="tag">
+        ASU · Leadership
+      </span>
+
+    </div>
+
+
+    <div class="scroll">
+      Scroll to explore
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     BIOGRAFIE
+========================= -->
+
+<section id="biografie">
+
+  <div class="wrap">
+
+
+    <div class="section-head reveal">
+
+      <div>
+
+        <div class="section-kicker">
+          01 / Persönlich
+        </div>
+
+        <h2 class="section-title">
+          Meine<br>
+          Biografie.
+        </h2>
+
+      </div>
+
+
+      <p class="section-note">
+
+        Wer ich bin, was ich bisher gemacht habe
+        und warum ich bereit bin, Verantwortung
+        in einer weiteren Abteilung zu übernehmen.
+
+      </p>
+
+    </div>
+
+
+    <div class="grid two">
+
+
+      <div class="card bio-photo reveal"></div>
+
+
+      <div class="card reveal delay1">
+
+        <div class="card-number">
+          PERSONAL FILE · 23 / SHERIFF
+        </div>
+
+
+        <div class="data-list">
+
+
+          <div class="data-row">
+
+            <span>
+              Name
+            </span>
+
+            <span>
+              Isaiah Novack
+            </span>
+
+          </div>
+
+
+          <div class="data-row">
+
+            <span>
+              Visumsstufe
+            </span>
+
+            <span>
+              22
+            </span>
+
+          </div>
+
+
+          <div class="data-row">
+
+            <span>
+              Aktueller Rang
+            </span>
+
+            <span>
+              Rang 23 · Sheriff
+            </span>
+
+          </div>
+
+
+          <div class="data-row">
+
+            <span>
+              Einheit
+            </span>
+
+            <span>
+              San Andreas Highway Patrol
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+        <p class="bio-text">
+
+          Ich bin bereits seit längerer Zeit im SAHP
+          und habe dadurch nicht nur die Strukturen
+          und den Arbeitsalltag der Fraktion kennengelernt,
+          sondern auch gelernt, Verantwortung zu übernehmen
+          und mich in unterschiedlichen Situationen zurechtzufinden.
+
+        </p>
+
+
+        <p class="bio-text">
+
+          Durch meine bisherigen Positionen konnte ich außerdem
+          Erfahrung in Führung, Organisation und Teamarbeit sammeln.
+          Genau diese Erfahrung möchte ich nun nutzen, um eine
+          eigene Abteilung zu übernehmen und sie aktiv weiterzuentwickeln.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ERFAHRUNG
+========================= -->
+
+<section id="erfahrung">
+
+  <div class="wrap">
+
+
+    <div class="section-head reveal">
+
+      <div>
+
+        <div class="section-kicker">
+          02 / Erfahrung
+        </div>
+
+        <h2 class="section-title">
+          Was ich<br>
+          mitbringe.
+        </h2>
+
+      </div>
+
+
+      <p class="section-note">
+
+        Meine bisherigen Positionen haben mir
+        unterschiedliche Perspektiven auf Führung,
+        Organisation und den operativen Alltag gegeben.
+
+      </p>
+
+    </div>
+
+
+    <div class="grid three">
+
+
+      <!-- TOW -->
+
+      <article class="card reveal">
+
+        <div class="exp">
+
+          <div class="exp-icon">
+            01
+          </div>
+
+
+          <div>
+
+            <small>
+              Führung · Organisation
+            </small>
+
+            <h3>
+              Abteilungsleiter der TOW · Rang 25
+            </h3>
+
+            <p>
+
+              Erfahrung darin, eine Abteilung zu strukturieren,
+              Aufgaben zu verteilen und für einen funktionierenden
+              Ablauf zu sorgen.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- FIB -->
+
+      <article class="card reveal delay1">
+
+        <div class="exp">
+
+          <div class="exp-icon">
+            02
+          </div>
+
+
+          <div>
+
+            <small>
+              Operativ · Taktisch
+            </small>
+
+            <h3>
+              FIB Agent · Rang 14
+            </h3>
+
+            <p>
+
+              Erfahrung in einem anspruchsvollen und taktisch
+              geprägten Arbeitsumfeld mit Fokus auf sauberes Vorgehen.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- VAGOS -->
+
+      <article class="card reveal delay2">
+
+        <div class="exp">
+
+          <div class="exp-icon">
+            03
+          </div>
+
+
+          <div>
+
+            <small>
+              Führung · Teamwork
+            </small>
+
+            <h3>
+              Rang 14 · Vagos Leader & Vize
+            </h3>
+
+            <p>
+
+              Führungserfahrung, Kommunikation mit Mitgliedern
+              und Verantwortung für einen größeren Teamverbund.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+    <div
+      class="card reveal"
+      style="margin-top:18px"
+    >
+
+      <div class="grid two">
+
+
+        <div>
+
+          <div class="section-kicker">
+            Leadership
+          </div>
+
+          <h3 style="font-size:28px">
+
+            Ich kenne die Verantwortung
+            hinter einem Abteilungsleiter-Rang.
+
+          </h3>
+
+        </div>
+
+
+        <p style="color:#9eafc0;font-size:14px">
+
+          Für mich bedeutet eine solche Position
+          nicht einfach einen höheren Rang zu tragen.
+          Es geht darum, Ansprechpartner für die eigenen
+          Leute zu sein, Abläufe zu verbessern, aktiv
+          mitzudenken und auch dann ruhig zu bleiben,
+          wenn es im Einsatz schnell gehen muss.
+
+          Durch meine bisherigen Positionen hatte ich
+          bereits mehrfach die Möglichkeit, genau diese
+          Verantwortung zu übernehmen.
+
+        </p>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MOTIVATION
+========================= -->
+
+<section id="motivation">
+
+  <div class="wrap">
+
+
+    <div class="section-head reveal">
+
+      <div>
+
+        <div class="section-kicker">
+          03 / Warum ASU?
+        </div>
+
+        <h2 class="section-title">
+
+          Warum mich<br>
+          die ASU reizt.
+
+        </h2>
+
+      </div>
+
+
+      <p class="section-note">
+
+        Die Air Support Unit verbindet für mich
+        Übersicht, Technik, Teamarbeit und schnelle
+        Entscheidungen – genau diese Kombination
+        macht die Abteilung besonders interessant.
+
+      </p>
+
+    </div>
+
+
+    <div class="grid two">
+
+
+      <div class="card motive reveal">
+
+        <div class="big">
+
+          ÜBERSICHT<br>
+
+          <span class="accent">
+            AUS DER LUFT.
+          </span>
+
+        </div>
+
+
+        <p>
+
+          Die ASU kann Einsätze aus einer komplett
+          anderen Perspektive unterstützen.
+
+          Genau diese Möglichkeit finde ich spannend:
+          Informationen früh erkennen, Kollegen am Boden
+          unterstützen und bei laufenden Situationen
+          den Überblick behalten.
+
+        </p>
+
+      </div>
+
+
+      <div class="card reveal delay1">
+
+        <div class="section-kicker">
+          Meine Motivation
+        </div>
+
+
+        <div class="checks">
+
+
+          <div class="check">
+
+            <b>✓</b>
+
+            <span>
+
+              Ich möchte meine bisherigen Führungserfahrungen
+              in einer neuen Abteilung einsetzen.
+
+            </span>
+
+          </div>
+
+
+          <div class="check">
+
+            <b>✓</b>
+
+            <span>
+
+              Ich finde die Kombination aus Luftunterstützung,
+              Kommunikation und Einsatzplanung besonders interessant.
+
+            </span>
+
+          </div>
+
+
+          <div class="check">
+
+            <b>✓</b>
+
+            <span>
+
+              Ich möchte die ASU nicht nur verwalten,
+              sondern aktiv mitgestalten und weiterentwickeln.
+
+            </span>
+
+          </div>
+
+
+          <div class="check">
+
+            <b>✓</b>
+
+            <span>
+
+              Ich möchte ein zuverlässiges Team aufbauen,
+              bei dem Kommunikation und Zusammenarbeit
+              an erster Stelle stehen.
+
+            </span>
+
+          </div>
+
+
+          <div class="check">
+
+            <b>✓</b>
+
+            <span>
+
+              Ich bringe bereits Erfahrung mit, eine
+              Abteilung zu übernehmen und Verantwortung
+              dafür zu tragen.
+
+            </span>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FLUGERFAHRUNG
+========================= -->
+
+<div
+  class="flight-banner"
+  id="flug"
+>
+
+  <div class="flight-content">
+
+
+    <div class="section-kicker reveal">
+
+      04 / Flugerfahrung
+
+    </div>
+
+
+    <h2 class="reveal delay1">
+
+      ERFAHRUNG,<br>
+
+      DIE WIEDER<br>
+
+      <span class="accent">
+        ZURÜCKKEHRT.
+      </span>
+
+    </h2>
+
+
+    <p class="reveal delay2">
+
+      Ich hatte bereits in der Vergangenheit Flugerfahrung
+      und konnte dadurch schon einmal Erfahrungen im Umgang
+      mit Luftfahrzeugen sammeln.
+
+      Dieses Wissen möchte ich wieder aufgreifen,
+      weiter ausbauen und sinnvoll in die ASU einbringen.
+
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     MEIN ANSATZ
+========================= -->
+
+<section>
+
+  <div class="wrap">
+
+
+    <div class="section-head reveal">
+
+      <div>
+
+        <div class="section-kicker">
+          05 / Mein Ansatz
+        </div>
+
+        <h2 class="section-title">
+
+          So würde ich<br>
+          die ASU führen.
+
+        </h2>
+
+      </div>
+
+
+      <p class="section-note">
+
+        Klare Strukturen, aktive Kommunikation
+        und ein Team, das sich aufeinander
+        verlassen kann.
+
+      </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+      <!-- 01 -->
+
+      <div class="t-item reveal">
+
+        <div class="t-dot"></div>
+
+        <div class="role">
+          01 · Struktur
+        </div>
+
+        <h3>
+          Klare Aufgaben & Zuständigkeiten
+        </h3>
+
+        <p>
+
+          Jeder soll wissen, welche Aufgaben er übernimmt
+          und an wen er sich bei Fragen oder Problemen
+          wenden kann.
+
+        </p>
+
+      </div>
+
+
+      <!-- 02 -->
+
+      <div class="t-item reveal delay1">
+
+        <div class="t-dot"></div>
+
+        <div class="role">
+          02 · Aktivität
+        </div>
+
+        <h3>
+          Eine aktive und präsente Abteilung
+        </h3>
+
+        <p>
+
+          Ich möchte, dass die ASU regelmäßig sichtbar ist
+          und nicht nur dann zum Einsatz kommt, wenn gerade
+          ein besonderer Fall entsteht.
+
+        </p>
+
+      </div>
+
+
+      <!-- 03 -->
+
+      <div class="t-item reveal delay2">
+
+        <div class="t-dot"></div>
+
+        <div class="role">
+          03 · Team
+        </div>
+
+        <h3>
+          Zusammenarbeit statt Einzelaktionen
+        </h3>
+
+        <p>
+
+          Gute Luftunterstützung funktioniert nur dann richtig,
+          wenn die Kommunikation zwischen Luft und Boden funktioniert.
+
+        </p>
+
+      </div>
+
+
+      <!-- 04 -->
+
+      <div class="t-item reveal delay3">
+
+        <div class="t-dot"></div>
+
+        <div class="role">
+          04 · Entwicklung
+        </div>
+
+        <h3>
+          Weiterentwicklung der ASU
+        </h3>
+
+        <p>
+
+          Ich möchte Verbesserungsvorschläge aus dem Team aufnehmen
+          und gemeinsam daraus bessere Abläufe machen.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ABSCHLUSS
+========================= -->
+
+<section
+  id="abschluss"
+  class="final"
+>
+
+  <div class="wrap">
+
+
+    <div class="section-kicker reveal">
+      06 / Abschluss
+    </div>
+
+
+    <h2 class="reveal delay1">
+
+      BEREIT FÜR<br>
+
+      <span>
+        DIE ASU.
+      </span>
+
+    </h2>
+
+
+    <p class="reveal delay2">
+
+      Ich habe bereits Erfahrung darin gesammelt,
+      Verantwortung zu übernehmen und eine Abteilung
+      zu führen.
+
+      Jetzt möchte ich diese Erfahrung nutzen,
+      um die Air Support Unit aktiv zu unterstützen,
+      ein starkes Team aufzubauen und die Abteilung
+      gemeinsam weiterzuentwickeln.
+
+    </p>
+
+
+    <div class="signature reveal delay3">
+
+      <strong>
+        Isaiah Novack
+      </strong>
+
+      <span>
+        Rang 23 · Sheriff · San Andreas Highway Patrol
+      </span>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <span>
+      SAHP · AIR SUPPORT UNIT
+    </span>
+
+    <span>
+      ISAIAH NOVACK · APPLICATION
+    </span>
+
+    <span>
+      ONE TEAM · ONE MISSION
+    </span>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+const loader =
+  document.getElementById('loader');
+
+const status =
+  document.getElementById('loaderStatus');
+
+let pct = 0;
+
+
+const timer = setInterval(() => {
+
+  pct += Math.floor(Math.random()*13)+5;
+
+
+  if(pct >= 100){
+
+    pct = 100;
+
+    clearInterval(timer);
+
+    status.textContent =
+      'SYSTEM BEREIT · 100%';
+
+
+    setTimeout(
+      () => loader.classList.add('hide'),
+      350
+    );
+
+
+  }else{
+
+    status.textContent =
+      'INITIALISIERE BEWERBUNG · '
+      + String(pct).padStart(2,'0')
+      + '%';
+
+  }
+
+},120);
+
+
+
+/* SCROLL ANIMATION */
+
+const observer =
+  new IntersectionObserver(
+
+    (entries)=>{
+
+      entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+          entry.target.classList.add('show');
+
+        }
+
+      });
+
+    },
+
+    {
+      threshold:.12
+    }
+
+  );
+
+
+document
+  .querySelectorAll('.reveal')
+  .forEach(
+    el => observer.observe(el)
+  );
+
+
+
+/* MOUSE GLOW */
+
+document.addEventListener(
+  'mousemove',
+  (e)=>{
+
+    document.body.style.setProperty(
+      '--mx',
+      e.clientX+'px'
+    );
+
+    document.body.style.setProperty(
+      '--my',
+      e.clientY+'px'
+    );
+
+  }
+);
+
+</script>
+
+
+</body>
+</html>
